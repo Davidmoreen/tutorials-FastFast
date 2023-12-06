@@ -1,6 +1,6 @@
 import Foundation
 
-struct Fast {
+struct Fast: Equatable {
     let startDate: Date
     let selectedFastLength: Int
     let endDate: Date?

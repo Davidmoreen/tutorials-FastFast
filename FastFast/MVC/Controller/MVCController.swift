@@ -46,6 +46,7 @@ class MVCController: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableView.tableHeaderView?.frame = .init(x: 0, y: 0, width: 0, height: 420)
     }
 
+    // MARK: - Fasts
     private func fastEnded(_ fast: Fast) {
         fasts.append(fast)
         tableView.beginUpdates()
@@ -74,6 +75,10 @@ class MVCController: UIViewController, UITableViewDelegate, UITableViewDataSourc
         cell.detailTextLabel?.text = fast.elapsedString
 
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {

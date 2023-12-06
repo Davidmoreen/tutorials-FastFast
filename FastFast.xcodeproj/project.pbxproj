@@ -25,6 +25,7 @@
 		39F0BD422B20DFEB008209F8 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0BD412B20DFEB008209F8 /* DateUtil.swift */; };
 		39F0BD452B20E412008209F8 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0BD442B20E412008209F8 /* EmptyStateView.swift */; };
 		39F0BD472B20E97E008209F8 /* FastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0BD462B20E97E008209F8 /* FastCell.swift */; };
+		39F0BD492B211993008209F8 /* FastingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0BD482B211993008209F8 /* FastingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		39F0BD412B20DFEB008209F8 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
 		39F0BD442B20E412008209F8 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		39F0BD462B20E97E008209F8 /* FastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastCell.swift; sourceTree = "<group>"; };
+		39F0BD482B211993008209F8 /* FastingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,8 +163,8 @@
 		3992C3282B20BE0C0052A209 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				3992C3292B20BE430052A209 /* MVCController.swift */,
-				3992C32A2B20BE430052A209 /* MVCController.xib */,
+				39F0BD4E2B2119DB008209F8 /* View */,
+				39F0BD4D2B2119D2008209F8 /* Controller */,
 			);
 			path = MVC;
 			sourceTree = "<group>";
@@ -170,8 +172,9 @@
 		3992C32D2B20BEA40052A209 /* MVVC */ = {
 			isa = PBXGroup;
 			children = (
-				3992C32E2B20BEBA0052A209 /* MVVCController.swift */,
-				3992C32F2B20BEBA0052A209 /* MVVCController.xib */,
+				39F0BD4C2B2119CB008209F8 /* ViewModel */,
+				39F0BD4B2B2119BF008209F8 /* View */,
+				39F0BD4A2B2119B9008209F8 /* Controller */,
 			);
 			path = MVVC;
 			sourceTree = "<group>";
@@ -192,6 +195,46 @@
 				39F0BD462B20E97E008209F8 /* FastCell.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		39F0BD4A2B2119B9008209F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3992C32E2B20BEBA0052A209 /* MVVCController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39F0BD4B2B2119BF008209F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3992C32F2B20BEBA0052A209 /* MVVCController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		39F0BD4C2B2119CB008209F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				39F0BD482B211993008209F8 /* FastingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		39F0BD4D2B2119D2008209F8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3992C3292B20BE430052A209 /* MVCController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		39F0BD4E2B2119DB008209F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3992C32A2B20BE430052A209 /* MVCController.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +372,7 @@
 			files = (
 				39F0BD452B20E412008209F8 /* EmptyStateView.swift in Sources */,
 				3992C32B2B20BE430052A209 /* MVCController.swift in Sources */,
+				39F0BD492B211993008209F8 /* FastingViewModel.swift in Sources */,
 				3992C2F82B20B3040052A209 /* TabBarController.swift in Sources */,
 				39F0BD472B20E97E008209F8 /* FastCell.swift in Sources */,
 				39F0BD3F2B20D0E2008209F8 /* FastingTimer.swift in Sources */,

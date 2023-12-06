@@ -12,7 +12,7 @@ class TabBarController: UITabBarController {
     func configureTabs() {
         let viewControllers = [
             UINavigationController(rootViewController: MVCController()),
-            UINavigationController(rootViewController: MVVCController())
+            UINavigationController(rootViewController: MVVCController(viewModel: FastingViewModel()))
         ]
         self.viewControllers = viewControllers
     }
