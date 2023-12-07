@@ -1,5 +1,4 @@
 import Foundation
-import Combine
 
 protocol FastingViewModelProtocol {
     var fasts: [Fast] { get }

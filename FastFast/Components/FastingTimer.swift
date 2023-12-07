@@ -1,17 +1,4 @@
-//
-//  FastingHeader.swift
-//  FastFast
-//
-//  Created by David Moreen on 12/6/23.
-//
-
 import SwiftUI
-
-struct CompletedFast {
-    let startDate: Date
-    let endDate: Date
-    let selectedLengthHours: Int
-}
 
 struct FastingTimer: View {
     let fastEnded: (Fast) -> Void
@@ -34,7 +21,7 @@ struct FastingTimer: View {
         guard let startDate else { return }
         fastEnded(.init(
             startDate: startDate,
-            selectedFastLength: selectedFastLength,
+            selectedFastLengthSeconds: selectedFastLength,
             endDate: Date())
         )
         self.startDate = nil

@@ -1,73 +1,74 @@
 import UIKit
 import SwiftUI
 
-class MVVCController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class FastingViewController: UIViewController {
     private let cellId = "fastCell"
 
     @IBOutlet private weak var tableView: UITableView!
 
-    private var viewModel: FastingViewModelProtocol
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-
-    init(viewModel: FastingViewModelProtocol) {
-        self.viewModel = viewModel
-        super.init(nibName: nil, bundle: nil)
-        self.title = "MVVC"
-    }
+    private var fasts: [Fast] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureViewModel()
         configureTableView()
         configureHeaderView()
     }
 
-    // MARK: - Bindings
-    private func configureViewModel() {
-
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        self.title = "MVC"
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
     // MARK: - View Setup
-    private func configureTableView() {
+    func configureTableView() {
         tableView.register(FastCell.self, forCellReuseIdentifier: cellId)
         tableView.tableFooterView = EmptyStateView.makeView(title: "No Fasts Yet")
         tableView.tableFooterView?.frame = .init(x: 0, y: 0, width: 0, height: 150)
     }
 
-    private func configureHeaderView() {
+    func configureHeaderView() {
         let hostingController = UIHostingController(rootView: FastingTimer(
-            fastEnded: { [weak self] fast in
-                guard let self else { return }
-                self.tableView.beginUpdates()
-                self.tableView.insertRows(at: [.init(row: self.viewModel.fasts.count, section: 0)], with: .automatic)
-                self.viewModel.createFast(fast)
-                self.tableView.endUpdates()
-            }
+            fastEnded: self.fastEnded
         ))
         tableView.tableHeaderView = hostingController.view
         tableView.tableHeaderView?.frame = .init(x: 0, y: 0, width: 0, height: 420)
     }
 
-    // MARK: - Table view data source
+    // MARK: - Fasts
+    private func fastEnded(_ fast: Fast) {
+        fasts.append(fast)
+        tableView.beginUpdates()
+        tableView.insertRows(at: [IndexPath(row: fasts.count - 1, section: 0)], with: .automatic)
+        tableView.endUpdates()
+    }
+}
 
+extension FastingViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension FastingViewController: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        tableView.tableFooterView?.isHidden = viewModel.hasFasts
-        return viewModel.fasts.count
+        tableView.tableFooterView?.isHidden = fasts.count > 0
+        return fasts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
 
         // Configure the cell...
-        let fast = viewModel.fasts[indexPath.row]
+        let fast = fasts[indexPath.row]
 
         cell.textLabel?.text = fast.dateString
         cell.detailTextLabel?.text = fast.elapsedString
@@ -75,14 +76,9 @@ class MVVCController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
 
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
-
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            let fast = viewModel.fasts[indexPath.row]
-            viewModel.deleteFast(fast)
+            fasts.remove(at: indexPath.row)
             tableView.beginUpdates()
             tableView.deleteRows(at: [.init(row: indexPath.row, section: 0)], with: .automatic)
             tableView.endUpdates()
@@ -92,5 +88,4 @@ class MVVCController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         "Fasting History"
     }
-
 }

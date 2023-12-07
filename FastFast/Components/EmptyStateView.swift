@@ -1,10 +1,3 @@
-//
-//  EmptyStateView.swift
-//  FastFast
-//
-//  Created by David Moreen on 12/6/23.
-//
-
 import SwiftUI
 
 struct EmptyStateView: View {

@@ -16,10 +16,10 @@
 		3992C3152B20B3050052A209 /* FastFastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3992C3142B20B3050052A209 /* FastFastUITests.swift */; };
 		3992C3172B20B3050052A209 /* FastFastUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3992C3162B20B3050052A209 /* FastFastUITestsLaunchTests.swift */; };
 		3992C3262B20BD590052A209 /* TabBarController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3992C3252B20BD590052A209 /* TabBarController.xib */; };
-		3992C32B2B20BE430052A209 /* MVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3992C3292B20BE430052A209 /* MVCController.swift */; };
-		3992C32C2B20BE430052A209 /* MVCController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3992C32A2B20BE430052A209 /* MVCController.xib */; };
-		3992C3302B20BEBA0052A209 /* MVVCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3992C32E2B20BEBA0052A209 /* MVVCController.swift */; };
-		3992C3312B20BEBA0052A209 /* MVVCController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3992C32F2B20BEBA0052A209 /* MVVCController.xib */; };
+		3992C32B2B20BE430052A209 /* FastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3992C3292B20BE430052A209 /* FastingViewController.swift */; };
+		3992C32C2B20BE430052A209 /* FastingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3992C32A2B20BE430052A209 /* FastingViewController.xib */; };
+		3992C3302B20BEBA0052A209 /* FastingMVVMViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3992C32E2B20BEBA0052A209 /* FastingMVVMViewController.swift */; };
+		3992C3312B20BEBA0052A209 /* FastingMVVMViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3992C32F2B20BEBA0052A209 /* FastingMVVMViewController.xib */; };
 		39F0BD3D2B20CE8F008209F8 /* Fast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0BD3C2B20CE8F008209F8 /* Fast.swift */; };
 		39F0BD3F2B20D0E2008209F8 /* FastingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0BD3E2B20D0E2008209F8 /* FastingTimer.swift */; };
 		39F0BD422B20DFEB008209F8 /* DateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F0BD412B20DFEB008209F8 /* DateUtil.swift */; };
@@ -59,10 +59,10 @@
 		3992C3142B20B3050052A209 /* FastFastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastUITests.swift; sourceTree = "<group>"; };
 		3992C3162B20B3050052A209 /* FastFastUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastFastUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		3992C3252B20BD590052A209 /* TabBarController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarController.xib; sourceTree = "<group>"; };
-		3992C3292B20BE430052A209 /* MVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCController.swift; sourceTree = "<group>"; };
-		3992C32A2B20BE430052A209 /* MVCController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVCController.xib; sourceTree = "<group>"; };
-		3992C32E2B20BEBA0052A209 /* MVVCController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVCController.swift; sourceTree = "<group>"; };
-		3992C32F2B20BEBA0052A209 /* MVVCController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVCController.xib; sourceTree = "<group>"; };
+		3992C3292B20BE430052A209 /* FastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingViewController.swift; sourceTree = "<group>"; };
+		3992C32A2B20BE430052A209 /* FastingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FastingViewController.xib; sourceTree = "<group>"; };
+		3992C32E2B20BEBA0052A209 /* FastingMVVMViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingMVVMViewController.swift; sourceTree = "<group>"; };
+		3992C32F2B20BEBA0052A209 /* FastingMVVMViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FastingMVVMViewController.xib; sourceTree = "<group>"; };
 		39F0BD3C2B20CE8F008209F8 /* Fast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fast.swift; sourceTree = "<group>"; };
 		39F0BD3E2B20D0E2008209F8 /* FastingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastingTimer.swift; sourceTree = "<group>"; };
 		39F0BD412B20DFEB008209F8 /* DateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtil.swift; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			children = (
 				39F0BD432B20E3F5008209F8 /* Components */,
 				39F0BD402B20DFDE008209F8 /* Util */,
-				3992C32D2B20BEA40052A209 /* MVVC */,
+				3992C32D2B20BEA40052A209 /* MVVM */,
 				3992C3282B20BE0C0052A209 /* MVC */,
 				3992C3272B20BE040052A209 /* Model */,
 				3992C2F32B20B3040052A209 /* AppDelegate.swift */,
@@ -169,14 +169,14 @@
 			path = MVC;
 			sourceTree = "<group>";
 		};
-		3992C32D2B20BEA40052A209 /* MVVC */ = {
+		3992C32D2B20BEA40052A209 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
 				39F0BD4C2B2119CB008209F8 /* ViewModel */,
 				39F0BD4B2B2119BF008209F8 /* View */,
 				39F0BD4A2B2119B9008209F8 /* Controller */,
 			);
-			path = MVVC;
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 		39F0BD402B20DFDE008209F8 /* Util */ = {
@@ -200,7 +200,7 @@
 		39F0BD4A2B2119B9008209F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3992C32E2B20BEBA0052A209 /* MVVCController.swift */,
+				3992C32E2B20BEBA0052A209 /* FastingMVVMViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 		39F0BD4B2B2119BF008209F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3992C32F2B20BEBA0052A209 /* MVVCController.xib */,
+				3992C32F2B20BEBA0052A209 /* FastingMVVMViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -224,7 +224,7 @@
 		39F0BD4D2B2119D2008209F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				3992C3292B20BE430052A209 /* MVCController.swift */,
+				3992C3292B20BE430052A209 /* FastingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 		39F0BD4E2B2119DB008209F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3992C32A2B20BE430052A209 /* MVCController.xib */,
+				3992C32A2B20BE430052A209 /* FastingViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,9 +341,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3992C32C2B20BE430052A209 /* MVCController.xib in Resources */,
+				3992C32C2B20BE430052A209 /* FastingViewController.xib in Resources */,
 				3992C3262B20BD590052A209 /* TabBarController.xib in Resources */,
-				3992C3312B20BEBA0052A209 /* MVVCController.xib in Resources */,
+				3992C3312B20BEBA0052A209 /* FastingMVVMViewController.xib in Resources */,
 				3992C3002B20B3050052A209 /* LaunchScreen.storyboard in Resources */,
 				3992C2FD2B20B3050052A209 /* Assets.xcassets in Resources */,
 			);
@@ -371,7 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				39F0BD452B20E412008209F8 /* EmptyStateView.swift in Sources */,
-				3992C32B2B20BE430052A209 /* MVCController.swift in Sources */,
+				3992C32B2B20BE430052A209 /* FastingViewController.swift in Sources */,
 				39F0BD492B211993008209F8 /* FastingViewModel.swift in Sources */,
 				3992C2F82B20B3040052A209 /* TabBarController.swift in Sources */,
 				39F0BD472B20E97E008209F8 /* FastCell.swift in Sources */,
@@ -380,7 +380,7 @@
 				39F0BD3D2B20CE8F008209F8 /* Fast.swift in Sources */,
 				39F0BD422B20DFEB008209F8 /* DateUtil.swift in Sources */,
 				3992C2F62B20B3040052A209 /* SceneDelegate.swift in Sources */,
-				3992C3302B20BEBA0052A209 /* MVVCController.swift in Sources */,
+				3992C3302B20BEBA0052A209 /* FastingMVVMViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,7 +480,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -537,7 +537,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

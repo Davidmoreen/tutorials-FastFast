@@ -2,13 +2,13 @@ import Foundation
 
 struct Fast: Equatable {
     let startDate: Date
-    let selectedFastLength: Int
+    let selectedFastLengthSeconds: Int
     let endDate: Date?
 
     var dateString: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .medium
-        dateFormatter.timeStyle = .none
+        dateFormatter.timeStyle = .short
         return dateFormatter.string(from: startDate)
     }
 
